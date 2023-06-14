@@ -1,5 +1,7 @@
+import { Header } from "@/components/";
 import "./globals.css";
 import { Ubuntu } from "next/font/google";
+import { Intro } from "@/components/intro";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -19,6 +21,8 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${ubuntu.className} bg-greenTheme-800`}>
+        <Header />
+        <Intro />
         {children}
       </body>
     </html>
